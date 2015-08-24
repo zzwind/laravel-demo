@@ -15,18 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//基础路由
 Route::get('/hello', function(){
     return 'world';
 });
 
+//命名路由 路由到控制器
+Route::get('hello1', ['as' => 'hellocontroll', 'uses' => 'HelloController@sayHelloWorld']);
 
+//路由参数
 Route::get('/hello/{name}', function($name){
    return 'hello,' . $name;
 });
 
 
-//和第一条路由冲突
+//参数可控，第一条路由冲突，运行时需要注释基础路由
 Route::get('/hello/{name?}', function($name = 'word'){
    return 'hello,' . $name; 
 });
@@ -36,3 +39,16 @@ Route::get('/hello/{name?}', function($name = 'word'){
 Route::get('/news/{id?}', function($id = 0){
     return 'newsid:' . $id;
 })->where(['id' => '\d+']);
+
+//路由组
+Route::group(['prefix' => 'news',], function(){
+    
+   Route::get('add', function(){
+      return 'in news/add'; 
+   });
+   
+   Route::get('edit', function(){
+      return 'in news/edit'; 
+   });
+   
+});
