@@ -1,9 +1,9 @@
 ### Table of Contents
 
-- [Laravel PHP Framework](#Laravel-PHP-Framework)
-- [Composer](#Composer)
+- [Laravel PHP Framework](#laravel-php-framework)
+- [Composer](#composer)
 - [路由](#路由)
-- [Usage](#usage)
+- [中间件](#中间件)
 - [Contribution Guidelines](#contribution-guidelines)
 - [Maintainers](#maintainers)
 - [License](#license)
@@ -37,3 +37,19 @@ PHP 用来管理依赖（dependency）关系的工具
 - 正则路由
 - 命名路由
 - 路由组
+
+
+## 中间件
+
+定义中间件
+`php artisan make:middleware OldMiddleware`
+
+
+## 控制器
+
+## 辅助函数
+- 数组
+- 路径
+- 字符串
+
+## 验证

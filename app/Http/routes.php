@@ -52,3 +52,12 @@ Route::group(['prefix' => 'news',], function(){
    });
    
 });
+
+
+Route::get('/age',['middleware' => 'age', function ()
+    {
+        return 'in age';
+    }]);
+    
+    
+    
