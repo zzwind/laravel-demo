@@ -53,3 +53,19 @@ PHP 用来管理依赖（dependency）关系的工具
 - 字符串
 
 ## 验证
+
+## null false
+```php
+$a == null  <== return true
+$a === null < == return false
+is_null($a) <== return false
+
+var_dump((bool) "");        // bool(false)
+var_dump((bool) 1);         // bool(true)
+var_dump((bool) -2);        // bool(true)
+var_dump((bool) "foo");     // bool(true)
+var_dump((bool) 2.3e5);     // bool(true)
+var_dump((bool) array(12)); // bool(true)
+var_dump((bool) array());   // bool(false)
+var_dump((bool) "false");   // bool(true)
+```
