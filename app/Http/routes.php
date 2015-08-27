@@ -59,5 +59,8 @@ Route::get('/age',['middleware' => 'age', function ()
         return 'in age';
     }]);
     
-    
+
+
+//测试验证
+Route::get('post', 'PostController@store');    
     

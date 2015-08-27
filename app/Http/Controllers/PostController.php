@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 
 class PostController extends Controller
 {
@@ -25,10 +27,21 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-			'title' => 'required|unique:posts|max:255',
-			'body' => 'required',
-		]);
+        // $this->validate($request, [
+		// 	'title' => 'required|unique:posts|max:255',
+		// 	'body' => 'required',
+		// ]);
+        
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ]);
+        
+        if ($validator->fails())
+        {
+            die('验证失败');
+        }
+        die('in store');
 		
     }
 }

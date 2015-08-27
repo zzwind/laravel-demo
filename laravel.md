@@ -54,8 +54,13 @@ PHP 用来管理依赖（dependency）关系的工具
 
 ## 验证
 
+
+
+
 ## null false
 ```php
+$a = array();
+
 $a == null  <== return true
 $a === null < == return false
 is_null($a) <== return false
