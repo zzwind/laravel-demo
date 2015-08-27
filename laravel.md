@@ -4,9 +4,10 @@
 - [Composer](#composer)
 - [路由](#路由)
 - [中间件](#中间件)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Maintainers](#maintainers)
-- [License](#license)
+- [控制器](#控制器)
+- [辅助函数](#辅助函数)
+- [验证](#验证)
+- [注意的类型](#注意的类型)
 
 
 
@@ -47,7 +48,8 @@ PHP 用来管理依赖（dependency）关系的工具
 
 ## 控制器
 
-## 辅助函数
+## 辅助函数 
+参考文档 [文档](http://www.golaravel.com/laravel/docs/5.1/helpers/)
 - 数组
 - 路径
 - 字符串
